@@ -1,14 +1,8 @@
 import { Outlet, useNavigate } from 'react-router-dom'
 import Navbar from '../navbar'
-// import { useState } from 'react'
-// import { products } from '../../utils/pruducts'
 const MainLayout = () => {
 	const navigate = useNavigate()
-	// const [data, setData] = useState(products)
-	// const handleActivate = () => {
-	// 	const updatedData = data.map(product => ({ ...product, active: true }))
-	// 	setData(updatedData)
-	// }
+
 	return (
 		<>
 			<div className='flex'>
@@ -60,11 +54,18 @@ const MainLayout = () => {
 								>
 									All
 								</button>
-								<button className='text-gray-600 py-1 px-3 border rounded-lg border-blue-200 focus:bg-white cursor-pointer focus:text-black'>
+
+								<button
+									onClick={() => navigate('/active')}
+									className='text-gray-600 py-1 px-3 border rounded-lg border-blue-200 focus:bg-white cursor-pointer focus:text-black'
+								>
 									Active
 								</button>
-								<button className='text-gray-600 py-1 px-3 border rounded-lg border-blue-200 focus:bg-white cursor-pointer focus:text-black'>
-									Drafts
+								<button
+									onClick={() => navigate('/inActive')}
+									className='text-gray-600 py-1 px-3 border rounded-lg border-blue-200 focus:bg-white cursor-pointer focus:text-black'
+								>
+									Inactive
 								</button>
 								<button className='text-gray-600 py-1 px-3 border rounded-lg border-blue-200 focus:bg-white cursor-pointer focus:text-black'>
 									Archived

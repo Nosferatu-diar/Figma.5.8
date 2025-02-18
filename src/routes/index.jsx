@@ -1,6 +1,8 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import MainLayout from '../components/main-layout'
+import Active from '../pages/active'
+import InActive from '../pages/inActive'
 const Home = React.lazy(() => import('../pages/home'))
 const Order = React.lazy(() => import('../pages/orders'))
 const Product = React.lazy(() => import('../pages/products'))
@@ -32,6 +34,14 @@ export const root = createBrowserRouter([
 			{
 				path: '/customer',
 				element: <Customer />,
+			},
+			{
+				path: '/active',
+				element: <Active />,
+			},
+			{
+				path: '/inActive',
+				element: <InActive />,
 			},
 		],
 	},
